@@ -24,3 +24,9 @@ def LLM_centrality(flight_network, airport, max_iter=100, tol=1e-6):
             break
 
     return centrality[airport]
+
+
+'''Il modulo introduce una nuova metrica di centralità adattata per grafi diretti, basata sulla centralità autovettoriale. 
+Calcola l’importanza di un aeroporto considerando i pesi degli archi entranti e normalizza i valori per evitare discrepanze.
+Questa metrica permette di analizzare ulteriormente il ruolo degli aeroporti nella rete e confrontare i risultati con le centralità 
+tradizionali.'''
