@@ -1,9 +1,10 @@
 # LLM Centrality Function: Eigenvector Centrality Adapted for DiGraph
 def LLM_centrality(flight_network, airport, max_iter=100, tol=1e-6):
    
-    N = len(flight_network)
-    centrality = {node: 1.0 / N for node in flight_network}
+    N = len(flight_network) # Initialize the number of nodes in the graph
+    centrality = {node: 1.0 / N for node in flight_network} # Initialize centrality scores for all nodes equally
 
+    # Iterate to refine centrality scores
     for _ in range(max_iter):
         prev_centrality = centrality.copy()
 
@@ -15,7 +16,7 @@ def LLM_centrality(flight_network, airport, max_iter=100, tol=1e-6):
             )
 
         # Normalization step
-        norm = max(sum(centrality.values()), 1e-10)
+        norm = max(sum(centrality.values()), 1e-10) # Avoid division by zero
         for node in centrality:
             centrality[node] /= norm
 
@@ -26,7 +27,10 @@ def LLM_centrality(flight_network, airport, max_iter=100, tol=1e-6):
     return centrality[airport]
 
 
-'''Il modulo introduce una nuova metrica di centralità adattata per grafi diretti, basata sulla centralità autovettoriale. 
-Calcola l’importanza di un aeroporto considerando i pesi degli archi entranti e normalizza i valori per evitare discrepanze.
-Questa metrica permette di analizzare ulteriormente il ruolo degli aeroporti nella rete e confrontare i risultati con le centralità 
-tradizionali.'''
+'''
+This module introduces a new centrality metric adapted for directed graphs, based on eigenvector centrality. 
+It computes the importance of an airport by considering the weighted incoming edges and normalizes the values 
+to ensure consistency. This metric allows for a deeper analysis of the role of airports in the network, providing 
+a basis for comparison with traditional centrality measures. The implementation is tailored to highlight critical 
+nodes in a weighted directed graph, such as a flight network.
+'''

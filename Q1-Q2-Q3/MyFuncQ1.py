@@ -40,13 +40,16 @@ def analyze_graph_features(flight_graph):
     plt.show()
 
     # Identify Hubs (Sum of In-Degree and Out-Degree)
-    degree_sum = {airport: in_degrees[airport] + out_degrees[airport] for airport in flight_graph.nodes()}
+    # Calculate the total degree (sum of in-degree and out-degree) for each node.
+    degree_sum = {airport: in_degrees[airport] + out_degrees[airport] for airport in flight_graph.nodes()} 
     threshold = pd.Series(list(degree_sum.values())).quantile(0.9)
+    # Filter airports with a total degree greater than the 90th percentile (considered hubs).
     hubs = {airport: degree for airport, degree in degree_sum.items() if degree > threshold}
 
     print(f"\n90th Percentile of Total Degree: {threshold:.2f}")
     print(f"Identified Hubs: {len(hubs)}")
 
+    # Create a table with the identified hubs and their total degrees.
     hub_table = pd.DataFrame(list(hubs.items()), columns=['Airport', 'Degree']).sort_values(by='Degree', ascending=False)
     hub_table.reset_index(drop=True, inplace=True)
     print("\nHub Table:")
@@ -100,11 +103,13 @@ def plot_busiest_routes(passenger_flow, top_n=10):
     """
     Display the busiest routes by passenger count.
     """
+    # Extract the top `top_n` busiest routes based on total passengers
     top_routes = passenger_flow.head(top_n)
 
     plt.figure(figsize=(10, 6))
+    # Create a horizontal bar chart
     plt.barh(
-        top_routes.apply(lambda x: f"{x['Origin_airport']} → {x['Destination_airport']}", axis=1),
+        top_routes.apply(lambda x: f"{x['Origin_airport']} → {x['Destination_airport']}", axis=1), # Format each route as "Origin → Destination"
         top_routes['Total_Passengers'],
         color='skyblue',
         edgecolor='black'
@@ -136,16 +141,17 @@ def create_flight_map(data, top_n=500):
     """
     Create an interactive flight route map.
     """
-    # Consider only the top `top_n` routes
+    # Sort and filter the top_n routes by Total_Passengers
     data = data.sort_values(by='Total_Passengers', ascending=False).head(top_n)
     
     # Calculate Central Position
     avg_lat = data[['Org_airport_lat', 'Dest_airport_lat']].mean().mean()
     avg_long = data[['Org_airport_long', 'Dest_airport_long']].mean().mean()
     
+    # Create a folium map centered at the average latitude and longitude
     m = folium.Map(location=[avg_lat, avg_long], zoom_start=5)
     
-    # Proportional Weight Calculation
+    # Find the maximum number of passengers to normalize the line thickness
     max_passengers = data['Total_Passengers'].max()
     
     # Identify the Top 10 Busiest Routes
@@ -153,21 +159,24 @@ def create_flight_map(data, top_n=500):
     
     # Add Lines to the Map
     for _, row in data.iterrows():
-        # Determine Color for the Top 10 Routes
+        # Set the line color to red for the top 10 busiest routes and blue for others
         color = "red" if row['Origin_airport'] in top_10_routes['Origin_airport'].values and \
                        row['Destination_airport'] in top_10_routes['Destination_airport'].values else "blue"
+        # Set the line thickness proportional to the number of passengers on the route
         weight = max(1, (row['Total_Passengers'] / max_passengers) * 10)
+
+        # Add the route as a polyline to the map
         folium.PolyLine(
             locations=[
-                [row['Org_airport_lat'], row['Org_airport_long']],
-                [row['Dest_airport_lat'], row['Dest_airport_long']]
+                [row['Org_airport_lat'], row['Org_airport_long']], #Start
+                [row['Dest_airport_lat'], row['Dest_airport_long']] # End
             ],
             color=color,
             weight=weight,
             opacity=0.7
         ).add_to(m)
 
-    # Add Markers for Airports
+    # Group the data by 'Origin_airport' and sum the total passengers for each airport
     airport_stats = (
         data.groupby("Origin_airport")["Total_Passengers"]
         .sum()
@@ -177,6 +186,7 @@ def create_flight_map(data, top_n=500):
     )
     airport_stats["Rank"] = airport_stats.index + 1
 
+    # Add markers for each airport
     for _, row in airport_stats.iterrows():
         airport = row['Origin_airport']
         lat = data[data['Origin_airport'] == airport]['Org_airport_lat'].iloc[0]
@@ -185,9 +195,10 @@ def create_flight_map(data, top_n=500):
         # Change color for top 10 airports
         color = "red" if row["Rank"] <= 10 else "green"
 
+        # Add a marker to the map for the airport
         folium.Marker(
             location=[lat, long],
-            popup=folium.Popup(
+            popup=folium.Popup(  # Information displayed when clicking on the marker
                 f"Airport: {airport}",
                 max_width=300
             ),
@@ -195,8 +206,10 @@ def create_flight_map(data, top_n=500):
         ).add_to(m)
     
     return m
-
-'''Questo modulo contiene funzioni per analizzare e visualizzare la rete di voli.
- Include funzioni per calcolare proprietà del grafo come densità, distribuzione dei gradi e identificazione degli hub. 
- Offre anche strumenti per creare grafici delle rotte più trafficate e mappe interattive con coordinate geografiche. 
- Queste funzionalità aiutano a comprendere le caratteristiche della rete e a comunicarle visivamente.'''
+'''
+This module contains functions to analyze and visualize the flight network. 
+It includes tools for calculating graph properties like density and degree distribution, 
+as well as identifying hubs. Additionally, it provides functionalities for creating bar 
+charts of the busiest routes and interactive maps with geographic coordinates. 
+These features help understand and visually communicate the network's characteristics.
+'''
