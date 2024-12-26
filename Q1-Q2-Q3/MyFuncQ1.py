@@ -2,6 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import pandas as pd
 import folium
+from IPython.display import display
 
 # Function to Analyze the Directed Graph
 def analyze_graph_features(flight_graph):
@@ -119,16 +120,18 @@ def plot_busiest_routes(passenger_flow, top_n=10):
 import pandas as pd
 import folium
 
-# Save Routes to CSV File
-def save_routes_to_csv(data, filename="Routes_with_Coordinates.csv"):
+def save_routes_to_csv(data, filename="Routes_with_Coordinates.csv", top_n=500):
     """
     Save routes with geographic coordinates to a CSV file.
     """
+    # Sort and filter the top_n routes by Total_Passengers
+    data = data.sort_values(by='Total_Passengers', ascending=False).head(top_n)
+    
+    # Save to CSV
     data.to_csv(filename, index=False)
-    print(f"CSV File Created: '{filename}'")
+    print(f"CSV File Created: '{filename}' with {len(data)} rows")
 
 
-# Function to Create an Interactive Map
 def create_flight_map(data, top_n=500):
     """
     Create an interactive flight route map.
@@ -178,13 +181,22 @@ def create_flight_map(data, top_n=500):
         airport = row['Origin_airport']
         lat = data[data['Origin_airport'] == airport]['Org_airport_lat'].iloc[0]
         long = data[data['Origin_airport'] == airport]['Org_airport_long'].iloc[0]
+
+        # Change color for top 10 airports
+        color = "red" if row["Rank"] <= 10 else "green"
+
         folium.Marker(
             location=[lat, long],
             popup=folium.Popup(
-                f"Airport: {airport}<br>Rank: {row['Rank']}<br>Total Passengers: {row['Total_Passengers']}",
+                f"Airport: {airport}",
                 max_width=300
             ),
-            icon=folium.Icon(color="green", icon="info-sign")
+            icon=folium.Icon(color=color, icon="info-sign")
         ).add_to(m)
     
     return m
+
+'''Questo modulo contiene funzioni per analizzare e visualizzare la rete di voli.
+ Include funzioni per calcolare proprietà del grafo come densità, distribuzione dei gradi e identificazione degli hub. 
+ Offre anche strumenti per creare grafici delle rotte più trafficate e mappe interattive con coordinate geografiche. 
+ Queste funzionalità aiutano a comprendere le caratteristiche della rete e a comunicarle visivamente.'''

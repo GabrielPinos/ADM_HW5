@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f48c8608a50f6d2e69e962e778fa17a2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f48c8608a50f6d2e69e962e778fa17a2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f48c8608a50f6d2e69e962e778fa17a2 = L.map(
+                "map_f48c8608a50f6d2e69e962e778fa17a2",
+                {
+                    center: [38.94449997, -77.45580292],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f97ed8987554cbaa1e3f88d4adc40290 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f97ed8987554cbaa1e3f88d4adc40290.addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+            var poly_line_1afd202e4b38440ac4c24110de8ed3ea = L.polyline(
+                [[38.94449997, -77.45580292], [40.63980103, -73.77890015]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+            var marker_1b1ea3fccb8b47f494669f55fc3044c0 = L.marker(
+                [38.94449997, -77.45580292],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_0520db7125952fcfd08ba251cd1a48d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21bc0f3da62fae0998fb2b80712ffeca = $(`<div id="html_21bc0f3da62fae0998fb2b80712ffeca" style="width: 100.0%; height: 100.0%;">Airport: IAD</div>`)[0];
+                popup_0520db7125952fcfd08ba251cd1a48d1.setContent(html_21bc0f3da62fae0998fb2b80712ffeca);
+            
+        
+
+        marker_1b1ea3fccb8b47f494669f55fc3044c0.bindPopup(popup_0520db7125952fcfd08ba251cd1a48d1)
+        ;
+
+        
+    
+    
+            var marker_c8416a71a9d67a356461331ecd651a3e = L.marker(
+                [40.63980103, -73.77890015],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_8bb4fc9f2a8d6bd3006eef7b54771acb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38d37b2ce0651374639f89b12d513ce3 = $(`<div id="html_38d37b2ce0651374639f89b12d513ce3" style="width: 100.0%; height: 100.0%;">Airport: JFK</div>`)[0];
+                popup_8bb4fc9f2a8d6bd3006eef7b54771acb.setContent(html_38d37b2ce0651374639f89b12d513ce3);
+            
+        
+
+        marker_c8416a71a9d67a356461331ecd651a3e.bindPopup(popup_8bb4fc9f2a8d6bd3006eef7b54771acb)
+        ;
+
+        
+    
+    
+            var poly_line_8ae53a46786d24097bb0a28c74861dc6 = L.polyline(
+                [[38.94449997, -77.45580292], [40.77719879, -73.87259674]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+            var marker_f97afad4d915ade30ac63064187731b8 = L.marker(
+                [38.94449997, -77.45580292],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_968f3874e99af0892921d34120a7145a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7665ea6162ad140ae52d5b6c95b636c5 = $(`<div id="html_7665ea6162ad140ae52d5b6c95b636c5" style="width: 100.0%; height: 100.0%;">Airport: IAD</div>`)[0];
+                popup_968f3874e99af0892921d34120a7145a.setContent(html_7665ea6162ad140ae52d5b6c95b636c5);
+            
+        
+
+        marker_f97afad4d915ade30ac63064187731b8.bindPopup(popup_968f3874e99af0892921d34120a7145a)
+        ;
+
+        
+    
+    
+            var marker_3bc475ccbac855ace1ed685fcf2cfaba = L.marker(
+                [40.77719879, -73.87259674],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_9f6fe7d70bc5811406a1343cbb9a1a76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d97c0c3399e0a652eee51ec8d92a15d6 = $(`<div id="html_d97c0c3399e0a652eee51ec8d92a15d6" style="width: 100.0%; height: 100.0%;">Airport: LGA</div>`)[0];
+                popup_9f6fe7d70bc5811406a1343cbb9a1a76.setContent(html_d97c0c3399e0a652eee51ec8d92a15d6);
+            
+        
+
+        marker_3bc475ccbac855ace1ed685fcf2cfaba.bindPopup(popup_9f6fe7d70bc5811406a1343cbb9a1a76)
+        ;
+
+        
+    
+    
+            var poly_line_a4e1ff7e1f9153e64ad22a9fb8baa77b = L.polyline(
+                [[38.8521, -77.037697], [40.63980103, -73.77890015]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+            var marker_99db9eb2bde52e9a4b52de1931b71b8f = L.marker(
+                [38.8521, -77.037697],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_bf0c68ae3112de3a7a3a35f20349e0c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e441759c00269d7d858623e592b0b678 = $(`<div id="html_e441759c00269d7d858623e592b0b678" style="width: 100.0%; height: 100.0%;">Airport: DCA</div>`)[0];
+                popup_bf0c68ae3112de3a7a3a35f20349e0c6.setContent(html_e441759c00269d7d858623e592b0b678);
+            
+        
+
+        marker_99db9eb2bde52e9a4b52de1931b71b8f.bindPopup(popup_bf0c68ae3112de3a7a3a35f20349e0c6)
+        ;
+
+        
+    
+    
+            var marker_586b5f7ef66f12f95eb9dad8f2ab86b6 = L.marker(
+                [40.63980103, -73.77890015],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_ea4c72149443a3fad1dd687c37e98d1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c1b4d077c48f377569ef80390007458 = $(`<div id="html_8c1b4d077c48f377569ef80390007458" style="width: 100.0%; height: 100.0%;">Airport: JFK</div>`)[0];
+                popup_ea4c72149443a3fad1dd687c37e98d1c.setContent(html_8c1b4d077c48f377569ef80390007458);
+            
+        
+
+        marker_586b5f7ef66f12f95eb9dad8f2ab86b6.bindPopup(popup_ea4c72149443a3fad1dd687c37e98d1c)
+        ;
+
+        
+    
+    
+            var poly_line_8fb9c693f60a13159bebe6d107f2b18d = L.polyline(
+                [[38.8521, -77.037697], [40.77719879, -73.87259674]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+            var marker_9206856df3cddc0dd90a102921378ad2 = L.marker(
+                [38.8521, -77.037697],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_2e32f32ae32b46a3f2d93b24c09fa717 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71eb6a16b891189a2dd02d4d7cc96bfd = $(`<div id="html_71eb6a16b891189a2dd02d4d7cc96bfd" style="width: 100.0%; height: 100.0%;">Airport: DCA</div>`)[0];
+                popup_2e32f32ae32b46a3f2d93b24c09fa717.setContent(html_71eb6a16b891189a2dd02d4d7cc96bfd);
+            
+        
+
+        marker_9206856df3cddc0dd90a102921378ad2.bindPopup(popup_2e32f32ae32b46a3f2d93b24c09fa717)
+        ;
+
+        
+    
+    
+            var marker_3741334a3e38c58e51059b5b5baa47b0 = L.marker(
+                [40.77719879, -73.87259674],
+                {
+}
+            ).addTo(map_f48c8608a50f6d2e69e962e778fa17a2);
+        
+    
+        var popup_597e08106638fcd25cdfc7fea8e356cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69cc26800fc8dc2895589f76d8920494 = $(`<div id="html_69cc26800fc8dc2895589f76d8920494" style="width: 100.0%; height: 100.0%;">Airport: LGA</div>`)[0];
+                popup_597e08106638fcd25cdfc7fea8e356cd.setContent(html_69cc26800fc8dc2895589f76d8920494);
+            
+        
+
+        marker_3741334a3e38c58e51059b5b5baa47b0.bindPopup(popup_597e08106638fcd25cdfc7fea8e356cd)
+        ;
+
+        
+    
+</script>
+</html>
