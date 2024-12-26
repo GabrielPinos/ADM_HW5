@@ -127,7 +127,7 @@ The dataset is publicly available on Kaggle and includes:
 
 **Author:** Gabriel Pinos, Fabrizio Ferrara 
 
-**Email:** [pinos.1965035@atudenti.uniroma1.it], [fabrizioferrara17@gmail.com]
+**Email:** [pinos.1965035@studenti.uniroma1.it], [fabrizioferrara17@gmail.com]
 
 *MSc. in Data Science, Sapienza University of Rome*
 
@@ -136,4 +136,4 @@ The dataset is publicly available on Kaggle and includes:
 ## Team
 
 - **Gabriel Pinos - 1965035** - [pinos.1965035@studenti.uniroma1.it](mailto:pinos.1965035@studenti.uniroma1.it)
-- **Fabrizio Ferrara -** - [fabrizioferrara17@gmail.com](mailto:fabrizioferrara17@gmail.com)
+- **Fabrizio Ferrara -2207087** - [fabrizioferrara17@gmail.com](mailto:fabrizioferrara17@gmail.com)
