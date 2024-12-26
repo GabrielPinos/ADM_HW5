@@ -122,7 +122,12 @@ The dataset is publicly available on Kaggle and includes:
 - **Collaboration**: Jupyter Notebooks, GitHub
 
 ---
+## Interactive Visualization of Flight Networks
 
+https://github.com/user-attachments/assets/51b32538-172e-432a-9955-8e2367cc182a
+
+
+---
 ## References
 
 1. [Kaggle - USA Airport Dataset](https://www.kaggle.com/datasets/flashgordon/usa-airport-dataset)
