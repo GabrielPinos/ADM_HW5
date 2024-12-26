@@ -54,16 +54,21 @@ This work leverages Python with libraries such as NetworkX, Matplotlib, and PySp
 
 ```
 .
-|-- functions/                        # Folder with the functions
-|   |-- analyze_centrality.py/        # Graph analysis functions
-|   |-- analyze_graph_features.py/    # Centrality computation
-|   |-- compare_centrality.py/        # Route optimization algorithms
-|   |-- flight_network_partition.py/  # Graph disconnection algorithms
-|   |-- summarize_graph_features.py/  # Community detection methods
-|-- main.ipynb/                       # Jupyter notebooks with the complete analysis
-|-- algorithm.ipynb/                  # Jupyter notebooks with the solution to the question about the algorithm
-|-- bonus.ipynb/                      # Jupyter notebooks with the answer to bonus question
-|-- README.md                         # This file
+|-- flight_network_maps_html/            # Folder with the html files of the map visualization
+|   |-- flight_communities.html/         # ChatGPT flight communities detection
+|   |-- flight_communites_oriented.html/ # Flight communities detection
+|   |-- flight_network_oriented.html/    # Flight partition 
+|-- functions/                           # Folder with the functions
+|   |-- analyze_centrality.py/           # Graph analysis functions
+|   |-- analyze_graph_features.py/       # Centrality computation
+|   |-- compare_centrality.py/           # Route optimization algorithms
+|   |-- flight_network_partition.py/     # Graph disconnection algorithms
+|   |-- summarize_graph_features.py/     # Summarize all graph features
+|   |-- flight_network_communities.py/   # Community detection methods
+|-- main.ipynb/                          # Jupyter notebooks with the complete analysis
+|-- algorithm.ipynb/                     # Jupyter notebooks with the solution to the question about the algorithm
+|-- bonus.ipynb/                         # Jupyter notebooks with the answer to bonus question
+|-- README.md                            # This file
 
 ```
 
