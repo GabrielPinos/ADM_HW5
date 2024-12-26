@@ -122,6 +122,19 @@ The dataset is publicly available on Kaggle and includes:
 - **Collaboration**: Jupyter Notebooks, GitHub
 
 ---
+
+
+## Visualizations
+
+The following HTML files demonstrate the map visualizations for the flight network:
+
+- [Flight Communities Detection](flight_network_maps_html/flight_communities.html)
+- [Oriented Flight Communities Detection](flight_network_maps_html/flight_communites_oriented.html)
+- [Flight Network Partition](flight_network_maps_html/flight_network_oriented.html)
+
+You can download these files and open them in a browser to explore the visualizations interactively.
+
+---
 ## Interactive Visualization of Flight Networks
 
 https://github.com/user-attachments/assets/51b32538-172e-432a-9955-8e2367cc182a
