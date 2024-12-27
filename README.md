@@ -2,6 +2,12 @@
 
 This is a GitHub repository created to submit the fifth homework of the **Algorithmic Methods for Data Mining (ADM)** course for the MSc. in Data Science at the Sapienza University of Rome.
 
+If you can't visualize the notebook click here!
+
+
+[Link for the notebook](https://nbviewer.org/github/GabrielPinos/ADM_HW5/blob/main/Final.ipynb)
+
+
 ---
 
 ## Overview
@@ -57,8 +63,14 @@ This work leverages Python with libraries such as NetworkX, Matplotlib, and PySp
 |-- flight_network_maps_html/            # Folder with the html files of the map visualization
 |   |-- flight_communities.html/         # ChatGPT flight communities detection
 |   |-- flight_communites_oriented.html/ # Flight communities detection
-|   |-- flight_network_oriented.html/    # Flight partition 
+|   |-- flight_network_oriented.html/    # Flight partition
+|   |-- Top_500_Routes_Map.html/         # Top 500 routes
+|   |-- washington_to_newyork.html/      # Best Routes between Washington and NewYork
+|   |-- newyork_to_eugene.html/          # Best Routes between NewYork and Eugene
 |-- functions/                           # Folder with the functions
+|   |-- MyFuncQ1.py/                     # All the functions for question 1
+|   |-- MyFuncQ2.py/                     # All the functions for question 2
+|   |-- MyFuncQ2LLM.py/                  # Function created by LLM
 |   |-- analyze_centrality.py/           # Graph analysis functions
 |   |-- analyze_graph_features.py/       # Centrality computation
 |   |-- compare_centrality.py/           # Route optimization algorithms
@@ -67,7 +79,7 @@ This work leverages Python with libraries such as NetworkX, Matplotlib, and PySp
 |   |-- flight_network_communities.py/   # Community detection methods
 |-- main.ipynb/                          # Jupyter notebooks with the complete analysis
 |-- algorithm.ipynb/                     # Jupyter notebooks with the solution to the question about the algorithm
-|-- bonus.ipynb/                         # Jupyter notebooks with the answer to bonus question
+|-- BonusQuestion.ipynb/                 # Jupyter notebooks with the answer to bonus question
 |-- README.md                            # This file
 
 ```
@@ -128,6 +140,12 @@ The dataset is publicly available on Kaggle and includes:
 
 The following HTML files demonstrate the map visualizations for the flight network:
 
+- [Top_500_Routes_Map](flight_network_maps_html/Top_500_Routes_Map.html)  
+  [Download](https://github.com/GabrielPinos/ADM_HW5/raw/main/flight_network_maps_htmlTop_500_Routes_Map.html)
+- [washington_to_newyork](flight_network_maps_html/washington_to_newyork.html)  
+  [Download](https://github.com/GabrielPinos/ADM_HW5/raw/main/flight_network_maps_html/washington_to_newyork.html)
+- [newyork_to_eugene](flight_network_maps_html/newyork_to_eugene.html)  
+  [Download](https://github.com/GabrielPinos/ADM_HW5/raw/main/flight_network_maps_html/newyork_to_eugene.html)
 - [Flight Communities Detection](flight_network_maps_html/flight_communities.html)  
   [Download](https://github.com/GabrielPinos/ADM_HW5/raw/main/flight_network_maps_html/flight_communities.html)
 - [Oriented Flight Communities Detection](flight_network_maps_html/flight_communites_oriented.html)  
