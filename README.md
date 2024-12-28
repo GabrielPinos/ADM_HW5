@@ -71,17 +71,13 @@ This work leverages Python with libraries such as NetworkX, Matplotlib, and PySp
 |   |-- MyFuncQ1.py/                     # All the functions for question 1
 |   |-- MyFuncQ2.py/                     # All the functions for question 2
 |   |-- MyFuncQ2LLM.py/                  # Function created by LLM
-|   |-- analyze_centrality.py/           # Graph analysis functions
-|   |-- analyze_graph_features.py/       # Centrality computation
-|   |-- compare_centrality.py/           # Route optimization algorithms
 |   |-- flight_network_partition.py/     # Graph disconnection algorithms
-|   |-- summarize_graph_features.py/     # Summarize all graph features
 |   |-- flight_network_communities.py/   # Community detection methods
 |-- main.ipynb/                          # Jupyter notebooks with the complete analysis
 |-- algorithm.ipynb/                     # Jupyter notebooks with the solution to the question about the algorithm
 |-- BonusQuestion.ipynb/                 # Jupyter notebooks with the answer to bonus question
+|-- Routes_with_Coordinates.csv          # File with coordinates used in Question for map display
 |-- README.md                            # This file
-
 ```
 
 ---
