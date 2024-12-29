@@ -72,7 +72,7 @@ This work leverages Python with libraries such as NetworkX, Matplotlib, and PySp
 |-- functions/                           # Folder with the functions
 |   |-- MyFuncQ1.py/                     # All the functions for question 1
 |   |-- MyFuncQ2.py/                     # All the functions for question 2
-|   |-- MyFuncQ2LLM.py/                  # Function created by LLM
+|   |-- MyFuncQ2LLM.py/                  # Function suggested by LLM
 |   |-- flight_network_partition.py/     # Graph disconnection algorithms
 |   |-- flight_network_communities.py/   # Community detection methods
 |-- main.ipynb/                          # Jupyter notebooks with the complete analysis
