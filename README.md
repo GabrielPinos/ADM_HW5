@@ -1,5 +1,6 @@
-# Algorithmic Methods for Data Mining - Homework 5 ✈️
+# **Algorithmic Methods for Data Mining - Homework 5 ✈️**
 
+## **Group 21**
 This is a GitHub repository created to submit the fifth homework of the **Algorithmic Methods for Data Mining (ADM)** course for the MSc. in Data Science at the Sapienza University of Rome.
 
 If you can't visualize the notebook click here!
@@ -174,7 +175,7 @@ https://github.com/user-attachments/assets/51b32538-172e-432a-9955-8e2367cc182a
 
 ---
 
-## Team
+## **Group 21**
 
 - **Gabriel Pinos - 1965035** - [pinos.1965035@studenti.uniroma1.it](mailto:pinos.1965035@studenti.uniroma1.it)
 - **Fabrizio Ferrara -2207087** - [fabrizioferrara17@gmail.com](mailto:fabrizioferrara17@gmail.com)
