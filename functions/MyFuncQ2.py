@@ -11,7 +11,7 @@ def degree_centrality(flight_network, airport):
     total_nodes = len(flight_network) - 1 # Total number of nodes in the graph excluding the current node
     return degree / total_nodes if total_nodes > 0 else 0  # Normalized
 
-# Closeness Centrality Function (dall'ultima versione)
+# Closeness Centrality Function 
 def closeness_centrality(flight_network, airport, wf_improved=True):
     reversed_graph = flight_network.reverse() # Reverse the graph to simulate incoming paths
     distances = dijkstra_distances(reversed_graph, airport)
@@ -34,7 +34,7 @@ def closeness_centrality(flight_network, airport, wf_improved=True):
 
     return closeness
 
-# Betweenness Centrality Function (dalla versione vecchia)
+# Betweenness Centrality Function 
 def betweenness_centrality(flight_network, airport):
     # Initialize total paths and paths passing through the specified airpor
     total_paths = 0
